@@ -17,6 +17,8 @@
 	<div class="bg-orb orb-1"></div>
 	<div class="bg-orb orb-2"></div>
 	<div class="bg-orb orb-3"></div>
+	<div class="bg-orb orb-4"></div>
+	<canvas id="bg-particles"></canvas>
 
 	<!-- NAV -->
 	<nav>
@@ -40,7 +42,8 @@
 			<div class="hero-badge"><span></span>Automation Testing Knowledge Base</div>
 			<h1><span class="gradient-text">Robot Framework</span><br />Automation Testing Guide</h1>
 			<p class="hero-sub">
-				A comprehensive collection of Libraries covering UI · API · Database · Mobile with real-world code examples ready to use.
+				A comprehensive collection of Libraries covering UI · API · Database · Mobile with real-world code
+				examples ready to use.
 			</p>
 			<div class="hero-actions">
 				<a href="#start" class="btn-primary">🚀 Get Started</a>
@@ -78,7 +81,6 @@
 				<div class="install-card reveal reveal-delay-1">
 					<div class="install-label">📦 Step 1 — Install</div>
 					<div class="code-block" style="margin: 0">
-						<button class="copy-btn" onclick="copyCode(this)">Copy</button>
 						<div><span class="prompt">$</span><span class="cmd">pip install robotframework</span></div>
 						<div><span class="prompt">$</span><span class="cmd">robot --version</span></div>
 						<div style="margin-top: 8px"><span class="comment"># Check the installed version</span></div>
@@ -90,7 +92,6 @@
 						">
 					<div class="install-label" style="color: #bf5af2">📝 Step 2 — Create a .robot file</div>
 					<div class="code-block" style="margin: 0">
-						<button class="copy-btn" onclick="copyCode(this)">Copy</button>
 						<div><span class="tag">*** Settings ***</span></div>
 						<div><span class="kw">Library</span> <span class="lib">Collections</span></div>
 						<div style="margin-top: 8px"><span class="tag">*** Test Cases ***</span></div>
@@ -149,7 +150,8 @@
 				<div class="cat-header reveal">
 					<div class="cat-pill standard">📦 Standard Library</div>
 					<div class="cat-line"></div>
-					<span style="font-size: 12px; color: var(--text-tertiary); white-space: nowrap">Included with robotframework</span>
+					<span style="font-size: 12px; color: var(--text-tertiary); white-space: nowrap">Included with
+						robotframework</span>
 				</div>
 				<div class="lib-grid">
 					<div class="glass-card lib-card reveal reveal-delay-1">
@@ -161,7 +163,8 @@
 							</div>
 						</div>
 						<div class="lib-desc">
-							Manage Lists, Dictionaries, Sets and other data structures. Includes keywords for append, remove, sort, compare, and nested structures.
+							Manage Lists, Dictionaries, Sets and other data structures. Includes keywords for append,
+							remove, sort, compare, and nested structures.
 						</div>
 						<div class="lib-install"><span>✓ built-in</span>pip install robotframework</div>
 						<div class="lib-links">
@@ -179,7 +182,8 @@
 							</div>
 						</div>
 						<div class="lib-desc">
-							Handle dates and times — convert formats, calculate date/time differences, support timestamps and timezones for time-dependent tests.
+							Handle dates and times — convert formats, calculate date/time differences, support
+							timestamps and timezones for time-dependent tests.
 						</div>
 						<div class="lib-install"><span>✓ built-in</span>pip install robotframework</div>
 						<div class="lib-links">
@@ -197,7 +201,8 @@
 							</div>
 						</div>
 						<div class="lib-desc">
-							Interact with the OS: manage files/folders, run command line commands, set environment variables, read/write files — works on Windows, Linux, and Mac.
+							Interact with the OS: manage files/folders, run command line commands, set environment
+							variables, read/write files — works on Windows, Linux, and Mac.
 						</div>
 						<div class="lib-install"><span>✓ built-in</span>pip install robotframework</div>
 						<div class="lib-links">
@@ -215,7 +220,8 @@
 							</div>
 						</div>
 						<div class="lib-desc">
-							Manipulate strings: split, replace, encode, decode, format, regex match/replace, upper/lower case, and all forms of string manipulation.
+							Manipulate strings: split, replace, encode, decode, format, regex match/replace, upper/lower
+							case, and all forms of string manipulation.
 						</div>
 						<div class="lib-install"><span>✓ built-in</span>pip install robotframework</div>
 						<div class="lib-links">
@@ -233,7 +239,8 @@
 							</div>
 						</div>
 						<div class="lib-desc">
-							Read, write, and parse XML documents. Search elements with XPath, validate structure, compare XML — ideal for SOAP API testing.
+							Read, write, and parse XML documents. Search elements with XPath, validate structure,
+							compare XML — ideal for SOAP API testing.
 						</div>
 						<div class="lib-install"><span>✓ built-in</span>pip install robotframework</div>
 						<div class="lib-links">
@@ -260,7 +267,8 @@
 							</div>
 						</div>
 						<div class="lib-desc">
-							Test Web UI via Selenium WebDriver. Supports Chrome, Firefox, Edge — click, fill forms, verify elements, take screenshots, and more.
+							Test Web UI via Selenium WebDriver. Supports Chrome, Firefox, Edge — click, fill forms,
+							verify elements, take screenshots, and more.
 						</div>
 						<div class="lib-install">
 							<span class="prompt" style="font-family: JetBrains Mono">$</span> pip install
@@ -281,7 +289,8 @@
 							</div>
 						</div>
 						<div class="lib-desc">
-							Powered by Playwright — test modern web apps faster than Selenium. Supports async, network interception, and has built-in auto-waiting.
+							Powered by Playwright — test modern web apps faster than Selenium. Supports async, network
+							interception, and has built-in auto-waiting.
 						</div>
 						<div class="lib-install">
 							<span class="prompt" style="font-family: JetBrains Mono">$</span> pip install
@@ -311,7 +320,8 @@
 							</div>
 						</div>
 						<div class="lib-desc">
-							Test REST APIs by sending HTTP requests (GET, POST, PUT, DELETE). Manage sessions, auth, headers, body, and verify responses.
+							Test REST APIs by sending HTTP requests (GET, POST, PUT, DELETE). Manage sessions, auth,
+							headers, body, and verify responses.
 						</div>
 						<div class="lib-install">
 							<span class="prompt" style="font-family: JetBrains Mono">$</span> pip install
@@ -332,7 +342,8 @@
 							</div>
 						</div>
 						<div class="lib-desc">
-							Manage JSON data: parse, validate, compare, and search keys via JSONPath. Pairs perfectly with RequestsLibrary for REST API testing.
+							Manage JSON data: parse, validate, compare, and search keys via JSONPath. Pairs perfectly
+							with RequestsLibrary for REST API testing.
 						</div>
 						<div class="lib-install">
 							<span class="prompt" style="font-family: JetBrains Mono">$</span> pip install
@@ -362,7 +373,8 @@
 							</div>
 						</div>
 						<div class="lib-desc">
-							Connect to and test databases. Run SQL queries, verify data — supports MySQL, PostgreSQL, Oracle, SQLite, and others via Python DB-API.
+							Connect to and test databases. Run SQL queries, verify data — supports MySQL, PostgreSQL,
+							Oracle, SQLite, and others via Python DB-API.
 						</div>
 						<div class="lib-install">
 							<span class="prompt" style="font-family: JetBrains Mono">$</span> pip install
@@ -392,7 +404,8 @@
 							</div>
 						</div>
 						<div class="lib-desc">
-							Test mobile apps on iOS and Android via Appium. Supports Native Apps, Hybrid Apps, and Mobile Web. Requires an Appium Server connection.
+							Test mobile apps on iOS and Android via Appium. Supports Native Apps, Hybrid Apps, and
+							Mobile Web. Requires an Appium Server connection.
 						</div>
 						<div class="lib-install">
 							<span class="prompt" style="font-family: JetBrains Mono">$</span> pip install
@@ -424,7 +437,10 @@
 							<span class="file-name">selenium_library.robot</span>
 							<span class="tag">SeleniumLibrary</span>
 						</div>
-						<button class="copy-btn" onclick="copyCodeBlock(this)">Copy</button>
+						<button class="copy-icon-btn" onclick="copyCodeBlock(this)"><svg viewBox="0 0 24 24">
+								<path d="M16 1H4c-1.1 0-2 .9-2 2v12h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14
+    c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z" />
+							</svg></button>
 					</div>
 					<pre><code data-src="examples/selenium_library.robot"></code></pre>
 				</div>
@@ -434,7 +450,10 @@
 							<span class="file-name">request_library.robot</span>
 							<span class="tag">RequestsLibrary</span>
 						</div>
-						<button class="copy-btn" onclick="copyCodeBlock(this)">Copy</button>
+						<button class="copy-icon-btn" onclick="copyCodeBlock(this)"><svg viewBox="0 0 24 24">
+								<path d="M16 1H4c-1.1 0-2 .9-2 2v12h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14
+    c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z" />
+							</svg></button>
 					</div>
 					<pre><code data-src="examples/request_library.robot"></code></pre>
 				</div>
@@ -444,7 +463,10 @@
 							<span class="file-name">database_library.robot</span>
 							<span class="tag">DatabaseLibrary</span>
 						</div>
-						<button class="copy-btn" onclick="copyCodeBlock(this)">Copy</button>
+						<button class="copy-icon-btn" onclick="copyCodeBlock(this)"><svg viewBox="0 0 24 24">
+								<path d="M16 1H4c-1.1 0-2 .9-2 2v12h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14
+    c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z" />
+							</svg></button>
 					</div>
 					<pre><code data-src="examples/database_library.robot"></code></pre>
 				</div>
@@ -454,7 +476,10 @@
 							<span class="file-name">appium_library_android.robot</span>
 							<span class="tag">AppiumLibrary</span>
 						</div>
-						<button class="copy-btn" onclick="copyCodeBlock(this)">Copy</button>
+						<button class="copy-icon-btn" onclick="copyCodeBlock(this)"><svg viewBox="0 0 24 24">
+								<path d="M16 1H4c-1.1 0-2 .9-2 2v12h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14
+    c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z" />
+							</svg></button>
 					</div>
 					<pre><code data-src="examples/appium_library_android.robot"></code></pre>
 				</div>
@@ -464,7 +489,10 @@
 							<span class="file-name">appium_library_ios.robot</span>
 							<span class="tag">AppiumLibrary</span>
 						</div>
-						<button class="copy-btn" onclick="copyCodeBlock(this)">Copy</button>
+						<button class="copy-icon-btn" onclick="copyCodeBlock(this)"><svg viewBox="0 0 24 24">
+								<path d="M16 1H4c-1.1 0-2 .9-2 2v12h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14
+    c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z" />
+							</svg></button>
 					</div>
 					<pre><code data-src="examples/appium_library_ios.robot"></code></pre>
 				</div>
@@ -474,7 +502,10 @@
 							<span class="file-name">collections.robot</span>
 							<span class="tag">Collections</span>
 						</div>
-						<button class="copy-btn" onclick="copyCodeBlock(this)">Copy</button>
+						<button class="copy-icon-btn" onclick="copyCodeBlock(this)"><svg viewBox="0 0 24 24">
+								<path d="M16 1H4c-1.1 0-2 .9-2 2v12h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14
+    c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z" />
+							</svg></button>
 					</div>
 					<pre><code data-src="examples/collections.robot"></code></pre>
 				</div>
@@ -484,7 +515,10 @@
 							<span class="file-name">datetime.robot</span>
 							<span class="tag">DateTime</span>
 						</div>
-						<button class="copy-btn" onclick="copyCodeBlock(this)">Copy</button>
+						<button class="copy-icon-btn" onclick="copyCodeBlock(this)"><svg viewBox="0 0 24 24">
+								<path d="M16 1H4c-1.1 0-2 .9-2 2v12h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14
+    c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z" />
+							</svg></button>
 					</div>
 					<pre><code data-src="examples/datetime.robot"></code></pre>
 				</div>
@@ -494,7 +528,10 @@
 							<span class="file-name">os.robot</span>
 							<span class="tag">OperatingSystem</span>
 						</div>
-						<button class="copy-btn" onclick="copyCodeBlock(this)">Copy</button>
+						<button class="copy-icon-btn" onclick="copyCodeBlock(this)"><svg viewBox="0 0 24 24">
+								<path d="M16 1H4c-1.1 0-2 .9-2 2v12h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14
+    c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z" />
+							</svg></button>
 					</div>
 					<pre><code data-src="examples/os.robot"></code></pre>
 				</div>
@@ -504,7 +541,10 @@
 							<span class="file-name">string.robot</span>
 							<span class="tag">String</span>
 						</div>
-						<button class="copy-btn" onclick="copyCodeBlock(this)">Copy</button>
+						<button class="copy-icon-btn" onclick="copyCodeBlock(this)"><svg viewBox="0 0 24 24">
+								<path d="M16 1H4c-1.1 0-2 .9-2 2v12h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14
+    c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z" />
+							</svg></button>
 					</div>
 					<pre><code data-src="examples/string.robot"></code></pre>
 				</div>
@@ -514,7 +554,10 @@
 							<span class="file-name">xml.robot</span>
 							<span class="tag">XML</span>
 						</div>
-						<button class="copy-btn" onclick="copyCodeBlock(this)">Copy</button>
+						<button class="copy-icon-btn" onclick="copyCodeBlock(this)"><svg viewBox="0 0 24 24">
+								<path d="M16 1H4c-1.1 0-2 .9-2 2v12h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14
+    c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z" />
+							</svg></button>
 					</div>
 					<pre><code data-src="examples/xml.robot"></code></pre>
 				</div>
