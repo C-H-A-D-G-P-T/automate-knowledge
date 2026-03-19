@@ -1,789 +1,531 @@
 <!doctype html>
-<html lang="th">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>AutoTest Hub — Robot Framework</title>
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link
-			href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@300;400;500;600;700&family=Sora:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
-			rel="stylesheet"
-		/>
-    <link rel="stylesheet" href="style.css">
-	</head>
-	<body>
-		<div class="bg-scene"></div>
-		<div class="bg-orb orb-1"></div>
-		<div class="bg-orb orb-2"></div>
-		<div class="bg-orb orb-3"></div>
+<html lang="en">
 
-		<!-- NAV -->
-		<nav>
-			<div class="nav-inner">
-				<div class="nav-logo">
-					<div class="logo-icon">🤖</div>
-					AutoTest Hub
-				</div>
-				<div class="nav-links">
-					<a href="#start">เริ่มต้น</a>
-					<a href="#libraries">Libraries</a>
-					<a href="#examples">ตัวอย่าง</a>
-				</div>
-				<a href="https://docs.robotframework.org/docs" target="_blank" class="nav-cta">Docs ↗</a>
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>AutoTest Hub — Robot Framework</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link
+		href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+		rel="stylesheet" />
+	<link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+	<div class="bg-scene"></div>
+	<div class="bg-orb orb-1"></div>
+	<div class="bg-orb orb-2"></div>
+	<div class="bg-orb orb-3"></div>
+
+	<!-- NAV -->
+	<nav>
+		<div class="nav-inner">
+			<div class="nav-logo">
+				<div class="logo-icon">🤖</div>
+				AutoTest Hub
 			</div>
-		</nav>
-
-		<!-- HERO -->
-		<div class="wrapper">
-			<section class="hero">
-				<div class="hero-badge"><span></span>Automation Testing Knowledge Base</div>
-				<h1><span class="gradient-text">Robot Framework</span><br />คู่มือเทสอัตโนมัติ</h1>
-				<p class="hero-sub">
-					รวบรวม Libraries ครบครัน ทั้ง UI · API · Database · Mobile พร้อม Code ตัวอย่างที่ใช้งานได้จริง
-				</p>
-				<div class="hero-actions">
-					<a href="#start" class="btn-primary">🚀 เริ่มต้นใช้งาน</a>
-					<a href="#libraries" class="btn-ghost">📚 ดู Libraries ทั้งหมด</a>
-				</div>
-			</section>
-
-			<!-- STATS -->
-			<div class="stats-row reveal">
-				<div class="stat-item">
-					<div class="stat-num">5</div>
-					<div class="stat-label">หมวดหมู่การทดสอบ</div>
-				</div>
-				<div class="stat-item">
-					<div class="stat-num">10+</div>
-					<div class="stat-label">Libraries พร้อมใช้</div>
-				</div>
-				<div class="stat-item">
-					<div class="stat-num">Python</div>
-					<div class="stat-label">ภาษาหลัก</div>
-				</div>
-				<div class="stat-item">
-					<div class="stat-num">Open</div>
-					<div class="stat-label">Source & Free</div>
-				</div>
+			<div class="nav-links">
+				<a href="#start">Get Started</a>
+				<a href="#libraries">Libraries</a>
+				<a href="#examples">Examples</a>
 			</div>
+			<a href="https://docs.robotframework.org/docs" target="_blank" class="nav-cta">Docs ↗</a>
+		</div>
+	</nav>
 
-			<!-- QUICK START -->
-			<section id="start">
-				<div class="section-title">⚡ Quick Start</div>
-				<h2 class="section-heading">เริ่มต้นใน 3 ขั้นตอน</h2>
-				<p class="section-desc">ติดตั้ง Robot Framework และเขียน Test Case แรกของคุณได้ภายในไม่กี่นาที</p>
+	<!-- HERO -->
+	<div class="wrapper">
+		<section class="hero">
+			<div class="hero-badge"><span></span>Automation Testing Knowledge Base</div>
+			<h1><span class="gradient-text">Robot Framework</span><br />Automation Testing Guide</h1>
+			<p class="hero-sub">
+				A comprehensive collection of Libraries covering UI · API · Database · Mobile with real-world code examples ready to use.
+			</p>
+			<div class="hero-actions">
+				<a href="#start" class="btn-primary">🚀 Get Started</a>
+				<a href="#libraries" class="btn-ghost">📚 View All Libraries</a>
+			</div>
+		</section>
 
-				<div style="margin-top: 32px; display: grid; grid-template-columns: 1fr 1fr; gap: 16px">
-					<div class="install-card reveal reveal-delay-1">
-						<div class="install-label">📦 Step 1 — ติดตั้ง</div>
-						<div class="code-block" style="margin: 0">
-							<button class="copy-btn" onclick="copyCode(this)">Copy</button>
-							<div><span class="prompt">$</span><span class="cmd">pip install robotframework</span></div>
-							<div><span class="prompt">$</span><span class="cmd">robot --version</span></div>
-							<div style="margin-top: 8px"><span class="comment"># ตรวจสอบ version ที่ติดตั้ง</span></div>
-						</div>
+		<!-- STATS -->
+		<div class="stats-row reveal">
+			<div class="stat-item">
+				<div class="stat-num">5</div>
+				<div class="stat-label">Testing Categories</div>
+			</div>
+			<div class="stat-item">
+				<div class="stat-num">10+</div>
+				<div class="stat-label">Ready-to-use Libraries</div>
+			</div>
+			<div class="stat-item">
+				<div class="stat-num">Python</div>
+				<div class="stat-label">Primary Language</div>
+			</div>
+			<div class="stat-item">
+				<div class="stat-num">Open</div>
+				<div class="stat-label">Source &amp; Free</div>
+			</div>
+		</div>
+
+		<!-- QUICK START -->
+		<section id="start">
+			<div class="section-title">⚡ Quick Start</div>
+			<h2 class="section-heading">Get Started in 3 Steps</h2>
+			<p class="section-desc">Install Robot Framework and write your first Test Case in just a few minutes.</p>
+
+			<div style="margin-top: 32px; display: grid; grid-template-columns: 1fr 1fr; gap: 16px">
+				<div class="install-card reveal reveal-delay-1">
+					<div class="install-label">📦 Step 1 — Install</div>
+					<div class="code-block" style="margin: 0">
+						<button class="copy-btn" onclick="copyCode(this)">Copy</button>
+						<div><span class="prompt">$</span><span class="cmd">pip install robotframework</span></div>
+						<div><span class="prompt">$</span><span class="cmd">robot --version</span></div>
+						<div style="margin-top: 8px"><span class="comment"># Check the installed version</span></div>
 					</div>
-					<div
-						class="install-card reveal reveal-delay-2"
-						style="
+				</div>
+				<div class="install-card reveal reveal-delay-2" style="
 							background: linear-gradient(135deg, rgba(191, 90, 242, 0.12), rgba(191, 90, 242, 0.06));
 							border-color: rgba(191, 90, 242, 0.2);
-						"
-					>
-						<div class="install-label" style="color: #bf5af2">📝 Step 2 — สร้างไฟล์ .robot</div>
-						<div class="code-block" style="margin: 0">
-							<button class="copy-btn" onclick="copyCode(this)">Copy</button>
-							<div><span class="tag">*** Settings ***</span></div>
-							<div><span class="kw">Library</span> <span class="lib">Collections</span></div>
-							<div style="margin-top: 8px"><span class="tag">*** Test Cases ***</span></div>
-							<div><span class="str">My First Test</span></div>
-							<div><span class="kw">Log</span> <span class="str">Hello Robot!</span></div>
+						">
+					<div class="install-label" style="color: #bf5af2">📝 Step 2 — Create a .robot file</div>
+					<div class="code-block" style="margin: 0">
+						<button class="copy-btn" onclick="copyCode(this)">Copy</button>
+						<div><span class="tag">*** Settings ***</span></div>
+						<div><span class="kw">Library</span> <span class="lib">Collections</span></div>
+						<div style="margin-top: 8px"><span class="tag">*** Test Cases ***</span></div>
+						<div><span class="str">My First Test</span></div>
+						<div>
+							&nbsp;&nbsp;&nbsp;&nbsp;<span class="kw">Log</span>
+							<span class="str">Hello Robot!</span>
 						</div>
 					</div>
 				</div>
-				<div
-					class="install-card reveal reveal-delay-3"
-					style="
+			</div>
+			<div class="install-card reveal reveal-delay-3" style="
 						margin-top: 16px;
 						background: linear-gradient(135deg, rgba(48, 209, 88, 0.12), rgba(48, 209, 88, 0.06));
 						border-color: rgba(48, 209, 88, 0.2);
-					"
-				>
-					<div class="install-label" style="color: #30d158">▶️ Step 3 — รัน Test</div>
-					<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px">
-						<div class="code-block" style="margin: 0">
+					">
+				<div class="install-label" style="color: #30d158">▶️ Step 3 — Run Tests</div>
+				<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px">
+					<div class="code-block" style="margin: 0">
+						<div>
+							<span class="prompt" style="color: #30d158">$</span><span class="cmd"> robot
+								my_test.robot</span>
+						</div>
+						<div style="margin-top: 8px"><span class="comment"># Run a single file</span></div>
+						<div>
+							<span class="prompt" style="color: #30d158">$</span><span class="cmd"> robot tests/</span>
+						</div>
+						<div style="margin-top: 4px"><span class="comment"># Run an entire folder</span></div>
+						<div>
+							<span class="prompt" style="color: #30d158">$</span><span class="cmd"> robot -d results
+								tests/</span>
+						</div>
+						<div style="margin-top: 4px">
+							<span class="comment"># Save reports to results/</span>
+						</div>
+					</div>
+					<div class="code-block" style="margin: 0; background: rgba(48, 209, 88, 0.05)">
+						<div style="color: #30d158; font-weight: 700">✓ Output</div>
+						<div style="margin-top: 8px; color: rgba(255, 255, 255, 0.7)">output.xml</div>
+						<div style="color: rgba(255, 255, 255, 0.7)">log.html</div>
+						<div style="color: rgba(255, 255, 255, 0.7)">report.html</div>
+						<div style="margin-top: 8px; color: #30d158">1 test, 1 passed, 0 failed</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- LIBRARIES -->
+		<section id="libraries">
+			<div class="section-title">📚 Libraries</div>
+			<h2 class="section-heading">All Libraries</h2>
+			<p class="section-desc">Choose a library based on your testing type — covering every use case.</p>
+
+			<!-- Standard Library -->
+			<div class="cat-section" style="margin-top: 40px">
+				<div class="cat-header reveal">
+					<div class="cat-pill standard">📦 Standard Library</div>
+					<div class="cat-line"></div>
+					<span style="font-size: 12px; color: var(--text-tertiary); white-space: nowrap">Included with robotframework</span>
+				</div>
+				<div class="lib-grid">
+					<div class="glass-card lib-card reveal reveal-delay-1">
+						<div class="lib-card-header">
+							<div class="lib-icon blue">🗂️</div>
 							<div>
-								<span class="prompt" style="color: #30d158">$</span
-								><span class="cmd"> robot my_test.robot</span>
+								<div class="lib-name">Collections</div>
+								<span class="lib-category">Standard</span>
 							</div>
-							<div style="margin-top: 8px"><span class="comment"># รันไฟล์เดียว</span></div>
+						</div>
+						<div class="lib-desc">
+							Manage Lists, Dictionaries, Sets and other data structures. Includes keywords for append, remove, sort, compare, and nested structures.
+						</div>
+						<div class="lib-install"><span>✓ built-in</span>pip install robotframework</div>
+						<div class="lib-links">
+							<a href="https://robotframework.org/robotframework/latest/libraries/Collections.html"
+								target="_blank" class="lib-link primary">📖 Docs</a>
+						</div>
+					</div>
+
+					<div class="glass-card lib-card reveal reveal-delay-2">
+						<div class="lib-card-header">
+							<div class="lib-icon cyan">🕐</div>
 							<div>
-								<span class="prompt" style="color: #30d158">$</span
-								><span class="cmd"> robot tests/</span>
+								<div class="lib-name">DateTime</div>
+								<span class="lib-category">Standard</span>
 							</div>
-							<div style="margin-top: 4px"><span class="comment"># รันทั้ง folder</span></div>
+						</div>
+						<div class="lib-desc">
+							Handle dates and times — convert formats, calculate date/time differences, support timestamps and timezones for time-dependent tests.
+						</div>
+						<div class="lib-install"><span>✓ built-in</span>pip install robotframework</div>
+						<div class="lib-links">
+							<a href="https://robotframework.org/robotframework/latest/libraries/DateTime.html"
+								target="_blank" class="lib-link primary">📖 Docs</a>
+						</div>
+					</div>
+
+					<div class="glass-card lib-card reveal reveal-delay-3">
+						<div class="lib-card-header">
+							<div class="lib-icon mint">💻</div>
 							<div>
-								<span class="prompt" style="color: #30d158">$</span
-								><span class="cmd"> robot -d results tests/</span>
-							</div>
-							<div style="margin-top: 4px">
-								<span class="comment"># บันทึก report ไว้ที่ results/</span>
+								<div class="lib-name">OperatingSystem</div>
+								<span class="lib-category">Standard</span>
 							</div>
 						</div>
-						<div class="code-block" style="margin: 0; background: rgba(48, 209, 88, 0.05)">
-							<div style="color: #30d158; font-weight: 700">✓ Output</div>
-							<div style="margin-top: 8px; color: rgba(255, 255, 255, 0.7)">output.xml</div>
-							<div style="color: rgba(255, 255, 255, 0.7)">log.html</div>
-							<div style="color: rgba(255, 255, 255, 0.7)">report.html</div>
-							<div style="margin-top: 8px; color: #30d158">1 test, 1 passed, 0 failed</div>
+						<div class="lib-desc">
+							Interact with the OS: manage files/folders, run command line commands, set environment variables, read/write files — works on Windows, Linux, and Mac.
+						</div>
+						<div class="lib-install"><span>✓ built-in</span>pip install robotframework</div>
+						<div class="lib-links">
+							<a href="https://robotframework.org/robotframework/latest/libraries/OperatingSystem.html"
+								target="_blank" class="lib-link primary">📖 Docs</a>
+						</div>
+					</div>
+
+					<div class="glass-card lib-card reveal reveal-delay-4">
+						<div class="lib-card-header">
+							<div class="lib-icon purple">🔤</div>
+							<div>
+								<div class="lib-name">String</div>
+								<span class="lib-category">Standard</span>
+							</div>
+						</div>
+						<div class="lib-desc">
+							Manipulate strings: split, replace, encode, decode, format, regex match/replace, upper/lower case, and all forms of string manipulation.
+						</div>
+						<div class="lib-install"><span>✓ built-in</span>pip install robotframework</div>
+						<div class="lib-links">
+							<a href="https://robotframework.org/robotframework/latest/libraries/String.html"
+								target="_blank" class="lib-link primary">📖 Docs</a>
+						</div>
+					</div>
+
+					<div class="glass-card lib-card reveal reveal-delay-1">
+						<div class="lib-card-header">
+							<div class="lib-icon orange">📄</div>
+							<div>
+								<div class="lib-name">XML</div>
+								<span class="lib-category">Standard</span>
+							</div>
+						</div>
+						<div class="lib-desc">
+							Read, write, and parse XML documents. Search elements with XPath, validate structure, compare XML — ideal for SOAP API testing.
+						</div>
+						<div class="lib-install"><span>✓ built-in</span>pip install robotframework</div>
+						<div class="lib-links">
+							<a href="https://robotframework.org/robotframework/latest/libraries/XML.html"
+								target="_blank" class="lib-link primary">📖 Docs</a>
 						</div>
 					</div>
 				</div>
-			</section>
+			</div>
 
-			<!-- LIBRARIES -->
-			<section id="libraries">
-				<div class="section-title">📚 Libraries</div>
-				<h2 class="section-heading">Library ทั้งหมด</h2>
-				<p class="section-desc">เลือก Library ตามประเภทการทดสอบที่ต้องการ ครอบคลุมทุก use case</p>
-
-				<!-- Standard -->
-				<div class="cat-section" style="margin-top: 40px">
-					<div class="cat-header reveal">
-						<div class="cat-pill standard">📦 Standard Library</div>
-						<div class="cat-line"></div>
-						<span style="font-size: 12px; color: var(--text-tertiary); white-space: nowrap"
-							>รวมมากับ robotframework</span
-						>
+			<!-- UI Testing -->
+			<div class="cat-section">
+				<div class="cat-header reveal">
+					<div class="cat-pill ui">🖥️ UI Testing</div>
+					<div class="cat-line"></div>
+				</div>
+				<div class="lib-grid">
+					<div class="glass-card lib-card reveal reveal-delay-1">
+						<div class="lib-card-header">
+							<div class="lib-icon purple">🌐</div>
+							<div>
+								<div class="lib-name">SeleniumLibrary</div>
+								<span class="lib-category">UI Testing</span>
+							</div>
+						</div>
+						<div class="lib-desc">
+							Test Web UI via Selenium WebDriver. Supports Chrome, Firefox, Edge — click, fill forms, verify elements, take screenshots, and more.
+						</div>
+						<div class="lib-install">
+							<span class="prompt" style="font-family: JetBrains Mono">$</span> pip install
+							robotframework-seleniumlibrary
+						</div>
+						<div class="lib-links">
+							<a href="https://robotframework.org/SeleniumLibrary/SeleniumLibrary.html" target="_blank"
+								class="lib-link primary">📖 Docs</a>
+						</div>
 					</div>
-					<div class="lib-grid">
-						<div class="glass-card lib-card reveal reveal-delay-1">
-							<div class="lib-card-header">
-								<div class="lib-icon blue">🗂️</div>
-								<div>
-									<div class="lib-name">Collections</div>
-									<span class="lib-category">Standard</span>
-								</div>
-							</div>
-							<div class="lib-desc">
-								จัดการ List, Dictionary, Set และ data structure ต่าง ๆ มี keyword ครบสำหรับ append,
-								remove, sort, compare รวมถึง nested structures
-							</div>
-							<div class="lib-install"><span>✓ built-in</span>pip install robotframework</div>
-							<div class="lib-links">
-								<a
-									href="https://robotframework.org/robotframework/latest/libraries/Collections.html"
-									target="_blank"
-									class="lib-link primary"
-									>📖 Docs</a
-								>
+
+					<div class="glass-card lib-card reveal reveal-delay-2">
+						<div class="lib-card-header">
+							<div class="lib-icon indigo">🎭</div>
+							<div>
+								<div class="lib-name">Browser Library</div>
+								<span class="lib-category">UI Testing</span>
 							</div>
 						</div>
-
-						<div class="glass-card lib-card reveal reveal-delay-2">
-							<div class="lib-card-header">
-								<div class="lib-icon cyan">🕐</div>
-								<div>
-									<div class="lib-name">DateTime</div>
-									<span class="lib-category">Standard</span>
-								</div>
-							</div>
-							<div class="lib-desc">
-								จัดการวันที่และเวลา แปลง format, คำนวณ date/time difference, รองรับ timestamp และ
-								timezone สำหรับ test ที่ต้องใช้เวลา
-							</div>
-							<div class="lib-install"><span>✓ built-in</span>pip install robotframework</div>
-							<div class="lib-links">
-								<a
-									href="https://robotframework.org/robotframework/latest/libraries/DateTime.html"
-									target="_blank"
-									class="lib-link primary"
-									>📖 Docs</a
-								>
-							</div>
+						<div class="lib-desc">
+							Powered by Playwright — test modern web apps faster than Selenium. Supports async, network interception, and has built-in auto-waiting.
 						</div>
-
-						<div class="glass-card lib-card reveal reveal-delay-3">
-							<div class="lib-card-header">
-								<div class="lib-icon mint">💻</div>
-								<div>
-									<div class="lib-name">OperatingSystem</div>
-									<span class="lib-category">Standard</span>
-								</div>
-							</div>
-							<div class="lib-desc">
-								ทำงานกับ OS: จัดการไฟล์/โฟลเดอร์, รัน command line, set environment variable,
-								อ่าน/เขียนไฟล์ ทั้ง Windows, Linux, Mac
-							</div>
-							<div class="lib-install"><span>✓ built-in</span>pip install robotframework</div>
-							<div class="lib-links">
-								<a
-									href="https://robotframework.org/robotframework/latest/libraries/OperatingSystem.html"
-									target="_blank"
-									class="lib-link primary"
-									>📖 Docs</a
-								>
-							</div>
+						<div class="lib-install">
+							<span class="prompt" style="font-family: JetBrains Mono">$</span> pip install
+							robotframework-browser
 						</div>
-
-						<div class="glass-card lib-card reveal reveal-delay-4">
-							<div class="lib-card-header">
-								<div class="lib-icon purple">🔤</div>
-								<div>
-									<div class="lib-name">String</div>
-									<span class="lib-category">Standard</span>
-								</div>
-							</div>
-							<div class="lib-desc">
-								จัดการ String: split, replace, encode, decode, format, regex match/replace, upper/lower
-								case และ string manipulation ทุกรูปแบบ
-							</div>
-							<div class="lib-install"><span>✓ built-in</span>pip install robotframework</div>
-							<div class="lib-links">
-								<a
-									href="https://robotframework.org/robotframework/latest/libraries/String.html"
-									target="_blank"
-									class="lib-link primary"
-									>📖 Docs</a
-								>
-							</div>
-						</div>
-
-						<div class="glass-card lib-card reveal reveal-delay-1">
-							<div class="lib-card-header">
-								<div class="lib-icon orange">📄</div>
-								<div>
-									<div class="lib-name">XML</div>
-									<span class="lib-category">Standard</span>
-								</div>
-							</div>
-							<div class="lib-desc">
-								อ่าน เขียน และ parse XML document ค้นหา element ด้วย XPath, validate structure,
-								เปรียบเทียบ XML สำหรับ SOAP API testing
-							</div>
-							<div class="lib-install"><span>✓ built-in</span>pip install robotframework</div>
-							<div class="lib-links">
-								<a
-									href="https://robotframework.org/robotframework/latest/libraries/XML.html"
-									target="_blank"
-									class="lib-link primary"
-									>📖 Docs</a
-								>
-							</div>
+						<div class="lib-links">
+							<a href="https://marketsquare.github.io/robotframework-browser/Browser.html" target="_blank"
+								class="lib-link primary">📖 Docs</a>
 						</div>
 					</div>
 				</div>
+			</div>
 
-				<!-- UI Testing -->
-				<div class="cat-section">
-					<div class="cat-header reveal">
-						<div class="cat-pill ui">🖥️ UI Testing</div>
-						<div class="cat-line"></div>
-					</div>
-					<div class="lib-grid">
-						<div class="glass-card lib-card reveal reveal-delay-1">
-							<div class="lib-card-header">
-								<div class="lib-icon purple">🌐</div>
-								<div>
-									<div class="lib-name">SeleniumLibrary</div>
-									<span class="lib-category">UI Testing</span>
-								</div>
-							</div>
-							<div class="lib-desc">
-								ทดสอบ Web UI ผ่าน Selenium WebDriver รองรับ Chrome, Firefox, Edge คลิก, กรอกข้อมูล,
-								ตรวจสอบ element, screenshot ฯลฯ
-							</div>
-							<div class="lib-install">
-								<span class="prompt" style="font-family: JetBrains Mono">$</span> pip install
-								robotframework-seleniumlibrary
-							</div>
-							<div class="lib-links">
-								<a
-									href="https://robotframework.org/SeleniumLibrary/SeleniumLibrary.html"
-									target="_blank"
-									class="lib-link primary"
-									>📖 Docs</a
-								>
+			<!-- API Testing -->
+			<div class="cat-section">
+				<div class="cat-header reveal">
+					<div class="cat-pill api">🔌 API Testing</div>
+					<div class="cat-line"></div>
+				</div>
+				<div class="lib-grid">
+					<div class="glass-card lib-card reveal reveal-delay-1">
+						<div class="lib-card-header">
+							<div class="lib-icon mint">🔗</div>
+							<div>
+								<div class="lib-name">RequestsLibrary</div>
+								<span class="lib-category">API Testing</span>
 							</div>
 						</div>
+						<div class="lib-desc">
+							Test REST APIs by sending HTTP requests (GET, POST, PUT, DELETE). Manage sessions, auth, headers, body, and verify responses.
+						</div>
+						<div class="lib-install">
+							<span class="prompt" style="font-family: JetBrains Mono">$</span> pip install
+							robotframework-requests
+						</div>
+						<div class="lib-links">
+							<a href="https://marketsquare.github.io/robotframework-requests/doc/RequestsLibrary.html"
+								target="_blank" class="lib-link primary">📖 Docs</a>
+						</div>
+					</div>
 
-						<div class="glass-card lib-card reveal reveal-delay-2">
-							<div class="lib-card-header">
-								<div class="lib-icon indigo">🎭</div>
-								<div>
-									<div class="lib-name">Browser Library</div>
-									<span class="lib-category">UI Testing</span>
-								</div>
+					<div class="glass-card lib-card reveal reveal-delay-2">
+						<div class="lib-card-header">
+							<div class="lib-icon teal">📋</div>
+							<div>
+								<div class="lib-name">JSONLibrary</div>
+								<span class="lib-category">API Testing</span>
 							</div>
-							<div class="lib-desc">
-								ใช้ Playwright เป็น engine ทดสอบ Modern Web ได้เร็วกว่า Selenium รองรับ async, network
-								interception, มี auto-waiting ในตัว
-							</div>
-							<div class="lib-install">
-								<span class="prompt" style="font-family: JetBrains Mono">$</span> pip install
-								robotframework-browser
-							</div>
-							<div class="lib-links">
-								<a
-									href="https://marketsquare.github.io/robotframework-browser/Browser.html"
-									target="_blank"
-									class="lib-link primary"
-									>📖 Docs</a
-								>
-							</div>
+						</div>
+						<div class="lib-desc">
+							Manage JSON data: parse, validate, compare, and search keys via JSONPath. Pairs perfectly with RequestsLibrary for REST API testing.
+						</div>
+						<div class="lib-install">
+							<span class="prompt" style="font-family: JetBrains Mono">$</span> pip install
+							robotframework-jsonlibrary
+						</div>
+						<div class="lib-links">
+							<a href="https://robotframework-thailand.github.io/robotframework-jsonlibrary/JSONLibrary.html"
+								target="_blank" class="lib-link primary">📖 Docs</a>
 						</div>
 					</div>
 				</div>
+			</div>
 
-				<!-- API Testing -->
-				<div class="cat-section">
-					<div class="cat-header reveal">
-						<div class="cat-pill api">🔌 API Testing</div>
-						<div class="cat-line"></div>
-					</div>
-					<div class="lib-grid">
-						<div class="glass-card lib-card reveal reveal-delay-1">
-							<div class="lib-card-header">
-								<div class="lib-icon mint">🔗</div>
-								<div>
-									<div class="lib-name">RequestsLibrary</div>
-									<span class="lib-category">API Testing</span>
-								</div>
-							</div>
-							<div class="lib-desc">
-								ทดสอบ REST API ส่ง HTTP request (GET, POST, PUT, DELETE) จัดการ session, auth, header,
-								body และ verify response
-							</div>
-							<div class="lib-install">
-								<span class="prompt" style="font-family: JetBrains Mono">$</span> pip install
-								robotframework-requests
-							</div>
-							<div class="lib-links">
-								<a
-									href="https://marketsquare.github.io/robotframework-requests/doc/RequestsLibrary.html"
-									target="_blank"
-									class="lib-link primary"
-									>📖 Docs</a
-								>
+			<!-- Database Testing -->
+			<div class="cat-section">
+				<div class="cat-header reveal">
+					<div class="cat-pill db">🗄️ Database Testing</div>
+					<div class="cat-line"></div>
+				</div>
+				<div class="lib-grid">
+					<div class="glass-card lib-card reveal reveal-delay-1">
+						<div class="lib-card-header">
+							<div class="lib-icon orange">🗄️</div>
+							<div>
+								<div class="lib-name">DatabaseLibrary</div>
+								<span class="lib-category">Database</span>
 							</div>
 						</div>
-
-						<div class="glass-card lib-card reveal reveal-delay-2">
-							<div class="lib-card-header">
-								<div class="lib-icon teal">📋</div>
-								<div>
-									<div class="lib-name">JSONLibrary</div>
-									<span class="lib-category">API Testing</span>
-								</div>
-							</div>
-							<div class="lib-desc">
-								จัดการ JSON data: parse, validate, เปรียบเทียบ, ค้นหา key ด้วย JSONPath ใช้คู่กับ
-								RequestsLibrary สำหรับ REST API testing
-							</div>
-							<div class="lib-install">
-								<span class="prompt" style="font-family: JetBrains Mono">$</span> pip install
-								robotframework-jsonlibrary
-							</div>
-							<div class="lib-links">
-								<a
-									href="https://robotframework-thailand.github.io/robotframework-jsonlibrary/JSONLibrary.html"
-									target="_blank"
-									class="lib-link primary"
-									>📖 Docs</a
-								>
-							</div>
+						<div class="lib-desc">
+							Connect to and test databases. Run SQL queries, verify data — supports MySQL, PostgreSQL, Oracle, SQLite, and others via Python DB-API.
+						</div>
+						<div class="lib-install">
+							<span class="prompt" style="font-family: JetBrains Mono">$</span> pip install
+							robotframework-databaselibrary
+						</div>
+						<div class="lib-links">
+							<a href="https://marketsquare.github.io/Robotframework-Database-Library/" target="_blank"
+								class="lib-link primary">📖 Docs</a>
 						</div>
 					</div>
 				</div>
+			</div>
 
-				<!-- Database -->
-				<div class="cat-section">
-					<div class="cat-header reveal">
-						<div class="cat-pill db">🗄️ Database Testing</div>
-						<div class="cat-line"></div>
-					</div>
-					<div class="lib-grid">
-						<div class="glass-card lib-card reveal reveal-delay-1">
-							<div class="lib-card-header">
-								<div class="lib-icon orange">🗄️</div>
-								<div>
-									<div class="lib-name">DatabaseLibrary</div>
-									<span class="lib-category">Database</span>
-								</div>
+			<!-- Mobile Testing -->
+			<div class="cat-section">
+				<div class="cat-header reveal">
+					<div class="cat-pill mobile">📱 Mobile Testing</div>
+					<div class="cat-line"></div>
+				</div>
+				<div class="lib-grid">
+					<div class="glass-card lib-card reveal reveal-delay-1">
+						<div class="lib-card-header">
+							<div class="lib-icon pink">📱</div>
+							<div>
+								<div class="lib-name">AppiumLibrary</div>
+								<span class="lib-category">Mobile</span>
 							</div>
-							<div class="lib-desc">
-								เชื่อมต่อและทดสอบ Database รัน SQL query, verify ข้อมูล, รองรับ MySQL, PostgreSQL,
-								Oracle, SQLite และ DB อื่น ๆ ผ่าน Python DB-API
-							</div>
-							<div class="lib-install">
-								<span class="prompt" style="font-family: JetBrains Mono">$</span> pip install
-								robotframework-databaselibrary
-							</div>
-							<div class="lib-links">
-								<a
-									href="https://marketsquare.github.io/Robotframework-Database-Library/"
-									target="_blank"
-									class="lib-link primary"
-									>📖 Docs</a
-								>
-							</div>
+						</div>
+						<div class="lib-desc">
+							Test mobile apps on iOS and Android via Appium. Supports Native Apps, Hybrid Apps, and Mobile Web. Requires an Appium Server connection.
+						</div>
+						<div class="lib-install">
+							<span class="prompt" style="font-family: JetBrains Mono">$</span> pip install
+							robotframework-appiumlibrary
+						</div>
+						<div class="lib-links">
+							<a href="https://serhatbolsu.github.io/robotframework-appiumlibrary/AppiumLibrary.html"
+								target="_blank" class="lib-link primary">📖 Docs</a>
 						</div>
 					</div>
 				</div>
+			</div>
+		</section>
 
-				<!-- Mobile -->
-				<div class="cat-section">
-					<div class="cat-header reveal">
-						<div class="cat-pill mobile">📱 Mobile Testing</div>
-						<div class="cat-line"></div>
+		<!-- CODE EXAMPLES -->
+		<section id="examples">
+			<div class="section-title">💻 Code Examples</div>
+			<div class="filter-bar">
+				<button class="filter-btn active" data-filter="ui">UI Testing</button>
+				<button class="filter-btn" data-filter="api">API Testing</button>
+				<button class="filter-btn" data-filter="db">Database Testing</button>
+				<button class="filter-btn" data-filter="mobile">Mobile Testing</button>
+				<button class="filter-btn" data-filter="std">Standard Library</button>
+			</div>
+			<div class="examples-grid">
+				<div class="code-card" data-category="ui">
+					<div class="code-header">
+						<div>
+							<span class="file-name">selenium_library.robot</span>
+							<span class="tag">SeleniumLibrary</span>
+						</div>
+						<button class="copy-btn" onclick="copyCodeBlock(this)">Copy</button>
 					</div>
-					<div class="lib-grid">
-						<div class="glass-card lib-card reveal reveal-delay-1">
-							<div class="lib-card-header">
-								<div class="lib-icon pink">📱</div>
-								<div>
-									<div class="lib-name">AppiumLibrary</div>
-									<span class="lib-category">Mobile</span>
-								</div>
-							</div>
-							<div class="lib-desc">
-								ทดสอบ Mobile App บน iOS และ Android ผ่าน Appium ทำได้ทั้ง Native App, Hybrid App และ
-								Mobile Web ต้องเชื่อมต่อกับ Appium Server
-							</div>
-							<div class="lib-install">
-								<span class="prompt" style="font-family: JetBrains Mono">$</span> pip install
-								robotframework-appiumlibrary
-							</div>
-							<div class="lib-links">
-								<a
-									href="https://serhatbolsu.github.io/robotframework-appiumlibrary/AppiumLibrary.html"
-									target="_blank"
-									class="lib-link primary"
-									>📖 Docs</a
-								>
-							</div>
+					<pre><code data-src="examples/selenium_library.robot"></code></pre>
+				</div>
+				<div class="code-card" data-category="api">
+					<div class="code-header">
+						<div>
+							<span class="file-name">request_library.robot</span>
+							<span class="tag">RequestsLibrary</span>
 						</div>
+						<button class="copy-btn" onclick="copyCodeBlock(this)">Copy</button>
 					</div>
+					<pre><code data-src="examples/request_library.robot"></code></pre>
 				</div>
-			</section>
-
-			<!-- CODE EXAMPLES -->
-			<section id="examples">
-				<div class="section-title">💡 Code Examples</div>
-				<h2 class="section-heading">ตัวอย่าง Test Cases</h2>
-				<p class="section-desc">ตัวอย่างโค้ดพร้อมใช้งานจริง คัดลอกและปรับแต่งได้เลย</p>
-
-				<div class="tab-bar reveal" style="margin-top: 32px">
-					<button class="tab-btn active" onclick="switchTab(this, 'tab-basic')">🔰 พื้นฐาน</button>
-					<button class="tab-btn" onclick="switchTab(this, 'tab-api')">🔌 API Test</button>
-					<button class="tab-btn" onclick="switchTab(this, 'tab-ui')">🌐 UI Test</button>
-					<button class="tab-btn" onclick="switchTab(this, 'tab-db')">🗄️ DB Test</button>
-				</div>
-
-				<!-- Basic -->
-				<div id="tab-basic" class="tab-panel active reveal">
-					<div class="example-grid">
-						<div class="glass-card example-card">
-							<div class="example-tag tag-basic">Collections</div>
-							<div class="example-title">จัดการ List & Dictionary</div>
-							<div class="example-desc">ตัวอย่างการใช้ Collections Library จัดการข้อมูล</div>
-							<div class="code-full">
-								<span class="ln">1</span><span class="tag">*** Settings ***</span>
-								<span class="ln">2</span><span class="kw">Library</span>
-								<span class="lib">Collections</span>
-
-								<span class="ln">3</span><span class="tag">*** Test Cases ***</span>
-								<span class="ln">4</span><span class="str">Test List Operations</span>
-								<span class="ln">5</span> <span class="kw">${my_list}</span>=
-								<span class="kw">Create List</span> <span class="str">apple banana cherry</span>
-								<span class="ln">6</span> <span class="kw">Append To List</span>
-								<span class="var">${my_list}</span> <span class="str">date</span>
-								<span class="ln">7</span> <span class="kw">List Should Contain Value</span>
-								<span class="var">${my_list}</span> <span class="str">banana</span>
-								<span class="ln">8</span> <span class="kw">Length Should Be</span>
-								<span class="var">${my_list}</span> <span class="str">4</span>
-
-								<span class="ln">9</span><span class="str">Test Dictionary Operations</span>
-								<span class="ln">10</span> <span class="kw">${user}</span>=
-								<span class="kw">Create Dictionary</span> <span class="ln">11</span> ...
-								<span class="str">name=Alice age=30 role=QA</span> <span class="ln">12</span>
-								<span class="kw">Dictionary Should Contain Key</span> <span class="var">${user}</span>
-								<span class="str">name</span> <span class="ln">13</span>
-								<span class="kw">${name}</span>= <span class="kw">Get From Dictionary</span>
-								<span class="var">${user}</span> <span class="str">name</span>
-								<span class="ln">14</span> <span class="kw">Should Be Equal</span>
-								<span class="var">${name}</span> <span class="str">Alice</span>
-							</div>
+				<div class="code-card" data-category="db">
+					<div class="code-header">
+						<div>
+							<span class="file-name">database_library.robot</span>
+							<span class="tag">DatabaseLibrary</span>
 						</div>
-
-						<div class="glass-card example-card">
-							<div class="example-tag tag-basic">String & DateTime</div>
-							<div class="example-title">จัดการ String และวันที่</div>
-							<div class="example-desc">ตัวอย่างการ manipulate string และคำนวณวันที่</div>
-							<div class="code-full">
-								<span class="ln">1</span><span class="tag">*** Settings ***</span>
-								<span class="ln">2</span><span class="kw">Library</span> <span class="lib">String</span>
-								<span class="ln">3</span><span class="kw">Library</span>
-								<span class="lib">DateTime</span>
-
-								<span class="ln">4</span><span class="tag">*** Test Cases ***</span>
-								<span class="ln">5</span><span class="str">Test String Operations</span>
-								<span class="ln">6</span> <span class="kw">${text}</span>=
-								<span class="kw">Set Variable</span> <span class="str">Hello, Robot Framework!</span>
-								<span class="ln">7</span> <span class="kw">${upper}</span>=
-								<span class="kw">Convert To Upper Case</span> <span class="var">${text}</span>
-								<span class="ln">8</span> <span class="kw">Should Contain</span>
-								<span class="var">${upper}</span> <span class="str">ROBOT</span>
-								<span class="ln">9</span> <span class="kw">${length}</span>=
-								<span class="kw">Get Length</span> <span class="var">${text}</span>
-								<span class="ln">10</span> <span class="kw">Should Be True</span>
-								<span class="var">${length}</span> > <span class="str">10</span>
-
-								<span class="ln">11</span><span class="str">Test Date Operations</span>
-								<span class="ln">12</span> <span class="kw">${today}</span>=
-								<span class="kw">Get Current Date</span> result_format=<span class="str">%Y-%m-%d</span>
-								<span class="ln">13</span> <span class="kw">${future}</span>=
-								<span class="kw">Add Time To Date</span> <span class="var">${today}</span>
-								<span class="str">7 days</span> <span class="ln">14</span> <span class="kw">Log</span>
-								<span class="str">Today: </span><span class="var">${today}</span>, Next Week:
-								<span class="var">${future}</span>
-							</div>
-						</div>
+						<button class="copy-btn" onclick="copyCodeBlock(this)">Copy</button>
 					</div>
+					<pre><code data-src="examples/database_library.robot"></code></pre>
 				</div>
-
-				<!-- API -->
-				<div id="tab-api" class="tab-panel">
-					<div class="example-grid">
-						<div class="glass-card example-card">
-							<div class="example-tag tag-api">REST API</div>
-							<div class="example-title">ทดสอบ GET & POST Request</div>
-							<div class="example-desc">ตัวอย่างการเรียก API และตรวจสอบ response</div>
-							<div class="code-full">
-								<span class="ln">1</span><span class="tag">*** Settings ***</span>
-								<span class="ln">2</span><span class="kw">Library</span>
-								<span class="lib">RequestsLibrary</span> <span class="ln">3</span
-								><span class="kw">Library</span> <span class="lib">Collections</span>
-
-								<span class="ln">4</span><span class="tag">*** Variables ***</span>
-								<span class="ln">5</span><span class="var">${BASE_URL}</span>
-								<span class="str">https://jsonplaceholder.typicode.com</span>
-
-								<span class="ln">6</span><span class="tag">*** Test Cases ***</span>
-								<span class="ln">7</span><span class="str">GET User By ID</span>
-								<span class="ln">8</span> <span class="kw">Create Session</span>
-								<span class="str">api ${BASE_URL}</span> <span class="ln">9</span>
-								<span class="kw">${resp}</span>= <span class="kw">GET On Session</span>
-								<span class="str">api /users/1</span> <span class="ln">10</span>
-								<span class="kw">Should Be Equal As Numbers</span>
-								<span class="var">${resp.status_code}</span> <span class="str">200</span>
-								<span class="ln">11</span> <span class="kw">${body}</span>=
-								<span class="kw">Set Variable</span> <span class="var">${resp.json()}</span>
-								<span class="ln">12</span> <span class="kw">Should Be Equal</span>
-								<span class="var">${body}[name]</span> <span class="str">Leanne Graham</span>
-
-								<span class="ln">13</span><span class="str">POST Create New Post</span>
-								<span class="ln">14</span> <span class="kw">${payload}</span>=
-								<span class="kw">Create Dictionary</span> <span class="ln">15</span> ...
-								<span class="str">title=Robot Test body=Automated userId=1</span>
-								<span class="ln">16</span> <span class="kw">${resp}</span>=
-								<span class="kw">POST On Session</span>
-								<span class="str">api /posts json=${payload}</span> <span class="ln">17</span>
-								<span class="kw">Should Be Equal As Numbers</span>
-								<span class="var">${resp.status_code}</span> <span class="str">201</span>
-							</div>
+				<div class="code-card" data-category="mobile">
+					<div class="code-header">
+						<div>
+							<span class="file-name">appium_library_android.robot</span>
+							<span class="tag">AppiumLibrary</span>
 						</div>
-
-						<div class="glass-card example-card">
-							<div class="example-tag tag-api">JSON Validation</div>
-							<div class="example-title">ตรวจสอบ JSON Response</div>
-							<div class="example-desc">ใช้ JSONLibrary ตรวจสอบข้อมูล JSON อย่างละเอียด</div>
-							<div class="code-full">
-								<span class="ln">1</span><span class="tag">*** Settings ***</span>
-								<span class="ln">2</span><span class="kw">Library</span>
-								<span class="lib">RequestsLibrary</span> <span class="ln">3</span
-								><span class="kw">Library</span> <span class="lib">JSONLibrary</span>
-
-								<span class="ln">4</span><span class="tag">*** Test Cases ***</span>
-								<span class="ln">5</span><span class="str">Validate JSON Schema</span>
-								<span class="ln">6</span> <span class="kw">Create Session</span>
-								<span class="str">api https://jsonplaceholder.typicode.com</span>
-								<span class="ln">7</span> <span class="kw">${resp}</span>=
-								<span class="kw">GET On Session</span> <span class="str">api /posts/1</span>
-								<span class="ln">8</span> <span class="kw">${json}</span>=
-								<span class="kw">Convert String To Json</span> <span class="var">${resp.text}</span>
-
-								<span class="ln">9</span> <span class="comment"># ค้นหาด้วย JSONPath</span>
-								<span class="ln">10</span> <span class="kw">${title}</span>=
-								<span class="kw">Get Value From Json</span> <span class="var">${json}</span>
-								<span class="str">$.title</span> <span class="ln">11</span>
-								<span class="kw">Should Not Be Empty</span> <span class="var">${title}</span>
-
-								<span class="ln">12</span> <span class="comment"># ตรวจสอบ key ที่ต้องมี</span>
-								<span class="ln">13</span> <span class="kw">Should Contain</span>
-								<span class="var">${resp.text}</span> <span class="str">userId</span>
-								<span class="ln">14</span> <span class="kw">Should Contain</span>
-								<span class="var">${resp.text}</span> <span class="str">body</span>
-								<span class="ln">15</span> <span class="kw">Log</span>
-								<span class="str">Post title: </span><span class="var">${title}</span>
-							</div>
-						</div>
+						<button class="copy-btn" onclick="copyCodeBlock(this)">Copy</button>
 					</div>
+					<pre><code data-src="examples/appium_library_android.robot"></code></pre>
 				</div>
-
-				<!-- UI -->
-				<div id="tab-ui" class="tab-panel">
-					<div class="example-grid">
-						<div class="glass-card example-card">
-							<div class="example-tag tag-ui">SeleniumLibrary</div>
-							<div class="example-title">ทดสอบ Web Login Form</div>
-							<div class="example-desc">ตัวอย่าง E2E test สำหรับหน้า Login</div>
-							<div class="code-full">
-								<span class="ln">1</span><span class="tag">*** Settings ***</span>
-								<span class="ln">2</span><span class="kw">Library</span>
-								<span class="lib">SeleniumLibrary</span> <span class="ln">3</span
-								><span class="kw">Suite Setup</span> <span class="kw">Open Browser</span>
-								<span class="str">about:blank chrome</span> <span class="ln">4</span
-								><span class="kw">Suite Teardown</span> <span class="kw">Close All Browsers</span>
-
-								<span class="ln">5</span><span class="tag">*** Variables ***</span>
-								<span class="ln">6</span><span class="var">${URL}</span>
-								<span class="str">https://example.com/login</span> <span class="ln">7</span
-								><span class="var">${USER}</span> <span class="str">testuser@email.com</span>
-								<span class="ln">8</span><span class="var">${PASS}</span>
-								<span class="str">securepassword123</span>
-
-								<span class="ln">9</span><span class="tag">*** Test Cases ***</span>
-								<span class="ln">10</span><span class="str">Login With Valid Credentials</span>
-								<span class="ln">11</span> <span class="kw">Go To</span> <span class="var">${URL}</span>
-								<span class="ln">12</span> <span class="kw">Wait Until Element Is Visible</span>
-								<span class="str">id:email 10s</span> <span class="ln">13</span>
-								<span class="kw">Input Text</span> <span class="str">id:email ${USER}</span>
-								<span class="ln">14</span> <span class="kw">Input Password</span>
-								<span class="str">id:password ${PASS}</span> <span class="ln">15</span>
-								<span class="kw">Click Button</span>
-								<span class="str">xpath://button[@type='submit']</span> <span class="ln">16</span>
-								<span class="kw">Wait Until Page Contains</span> <span class="str">Dashboard 10s</span>
-								<span class="ln">17</span> <span class="kw">Capture Page Screenshot</span>
-							</div>
+				<div class="code-card" data-category="mobile">
+					<div class="code-header">
+						<div>
+							<span class="file-name">appium_library_ios.robot</span>
+							<span class="tag">AppiumLibrary</span>
 						</div>
-
-						<div class="glass-card example-card">
-							<div class="example-tag tag-ui">Browser Library</div>
-							<div class="example-title">ทดสอบด้วย Playwright</div>
-							<div class="example-desc">ใช้ Browser Library (Playwright) ทดสอบ modern web</div>
-							<div class="code-full">
-								<span class="ln">1</span><span class="tag">*** Settings ***</span>
-								<span class="ln">2</span><span class="kw">Library</span>
-								<span class="lib">Browser</span> <span class="ln">3</span
-								><span class="kw">Suite Setup</span> <span class="kw">New Browser</span>
-								<span class="str">chromium headless=False</span> <span class="ln">4</span
-								><span class="kw">Suite Teardown</span> <span class="kw">Close Browser</span>
-
-								<span class="ln">5</span><span class="tag">*** Test Cases ***</span>
-								<span class="ln">6</span><span class="str">Search Product On E-Commerce</span>
-								<span class="ln">7</span> <span class="kw">New Page</span>
-								<span class="str">https://shop.example.com</span> <span class="ln">8</span>
-								<span class="kw">Fill Text</span>
-								<span class="str">input[placeholder="Search"] Robot Framework</span>
-								<span class="ln">9</span> <span class="kw">Keyboard Key</span>
-								<span class="str">press Enter</span> <span class="ln">10</span>
-								<span class="kw">Wait For Elements State</span>
-								<span class="str">.product-card visible</span> <span class="ln">11</span>
-								<span class="kw">${count}</span>= <span class="kw">Get Element Count</span>
-								<span class="str">.product-card</span> <span class="ln">12</span>
-								<span class="kw">Should Be True</span> <span class="var">${count}</span> >
-								<span class="str">0</span> <span class="ln">13</span>
-								<span class="kw">Take Screenshot</span> <span class="str">search_results.png</span>
-							</div>
-						</div>
+						<button class="copy-btn" onclick="copyCodeBlock(this)">Copy</button>
 					</div>
+					<pre><code data-src="examples/appium_library_ios.robot"></code></pre>
 				</div>
-
-				<!-- DB -->
-				<div id="tab-db" class="tab-panel">
-					<div class="example-grid">
-						<div class="glass-card example-card">
-							<div class="example-tag tag-data">DatabaseLibrary</div>
-							<div class="example-title">เชื่อมต่อและ Query Database</div>
-							<div class="example-desc">ทดสอบข้อมูลใน MySQL/PostgreSQL</div>
-							<div class="code-full">
-								<span class="ln">1</span><span class="tag">*** Settings ***</span>
-								<span class="ln">2</span><span class="kw">Library</span>
-								<span class="lib">DatabaseLibrary</span> <span class="ln">3</span
-								><span class="kw">Suite Setup</span> <span class="kw">Connect To Database</span>
-								<span class="ln">4</span><span class="kw">Suite Teardown</span>
-								<span class="kw">Disconnect From Database</span>
-
-								<span class="ln">5</span><span class="tag">*** Variables ***</span>
-								<span class="ln">6</span><span class="var">${DB_HOST}</span>
-								<span class="str">localhost</span> <span class="ln">7</span
-								><span class="var">${DB_PORT}</span> <span class="str">3306</span>
-								<span class="ln">8</span><span class="var">${DB_NAME}</span>
-								<span class="str">myapp</span>
-
-								<span class="ln">9</span><span class="tag">*** Keywords ***</span>
-								<span class="ln">10</span><span class="str">Connect To Database</span>
-								<span class="ln">11</span>
-								<span class="kw">Connect To Database Using Custom Params</span>
-								<span class="str">pymysql</span> <span class="ln">12</span> ...
-								<span class="str">host=${DB_HOST} port=${DB_PORT} db=${DB_NAME}</span>
-
-								<span class="ln">13</span><span class="tag">*** Test Cases ***</span>
-								<span class="ln">14</span><span class="str">Verify User Record Exists</span>
-								<span class="ln">15</span> <span class="kw">Row Count Is Equal To X</span>
-								<span class="ln">16</span> ...
-								<span class="str">SELECT * FROM users WHERE email='test@email.com'</span>
-								<span class="str">1</span>
-
-								<span class="ln">17</span><span class="str">Verify Product Stock Updated</span>
-								<span class="ln">18</span> <span class="kw">${result}</span>=
-								<span class="kw">Query</span> <span class="ln">19</span> ...
-								<span class="str">SELECT stock FROM products WHERE id=1</span>
-								<span class="ln">20</span> <span class="kw">Should Be True</span>
-								<span class="var">${result[0][0]}</span> > <span class="str">0</span>
-							</div>
+				<div class="code-card" data-category="std">
+					<div class="code-header">
+						<div>
+							<span class="file-name">collections.robot</span>
+							<span class="tag">Collections</span>
 						</div>
-
-						<div class="glass-card example-card">
-							<div class="example-tag tag-data">Data Driven</div>
-							<div class="example-title">Data-Driven Testing</div>
-							<div class="example-desc">ทดสอบหลาย scenario ด้วยข้อมูลจาก file</div>
-							<div class="code-full">
-								<span class="ln">1</span><span class="tag">*** Settings ***</span>
-								<span class="ln">2</span><span class="kw">Library</span>
-								<span class="lib">Collections</span> <span class="ln">3</span
-								><span class="kw">Library</span> <span class="lib">OperatingSystem</span>
-								<span class="ln">4</span><span class="kw">Test Template</span> Verify Login Scenario
-
-								<span class="ln">5</span><span class="tag">*** Test Cases ***</span>
-								<span class="comment">USERNAME PASSWORD EXPECTED</span> <span class="ln">6</span
-								><span class="str">Valid Login</span> <span class="str">admin admin123 success</span>
-								<span class="ln">7</span><span class="str">Wrong Password</span>
-								<span class="str">admin wrong123 fail</span> <span class="ln">8</span
-								><span class="str">Empty Username</span> <span class="str">${EMPTY} admin123 fail</span>
-								<span class="ln">9</span><span class="str">SQL Injection Attempt</span>
-								<span class="str">admin'-- any fail</span>
-
-								<span class="ln">10</span><span class="tag">*** Keywords ***</span>
-								<span class="ln">11</span><span class="str">Verify Login Scenario</span>
-								<span class="ln">12</span> <span class="kw">[Arguments]</span>
-								<span class="var">${username} ${password} ${expected}</span> <span class="ln">13</span>
-								<span class="kw">${result}</span>= <span class="kw">Attempt Login</span>
-								<span class="var">${username} ${password}</span> <span class="ln">14</span>
-								<span class="kw">Should Be Equal</span> <span class="var">${result} ${expected}</span>
-							</div>
-						</div>
+						<button class="copy-btn" onclick="copyCodeBlock(this)">Copy</button>
 					</div>
+					<pre><code data-src="examples/collections.robot"></code></pre>
 				</div>
-			</section>
-		</div>
+				<div class="code-card" data-category="std">
+					<div class="code-header">
+						<div>
+							<span class="file-name">datetime.robot</span>
+							<span class="tag">DateTime</span>
+						</div>
+						<button class="copy-btn" onclick="copyCodeBlock(this)">Copy</button>
+					</div>
+					<pre><code data-src="examples/datetime.robot"></code></pre>
+				</div>
+				<div class="code-card" data-category="std">
+					<div class="code-header">
+						<div>
+							<span class="file-name">os.robot</span>
+							<span class="tag">OperatingSystem</span>
+						</div>
+						<button class="copy-btn" onclick="copyCodeBlock(this)">Copy</button>
+					</div>
+					<pre><code data-src="examples/os.robot"></code></pre>
+				</div>
+				<div class="code-card" data-category="std">
+					<div class="code-header">
+						<div>
+							<span class="file-name">string.robot</span>
+							<span class="tag">String</span>
+						</div>
+						<button class="copy-btn" onclick="copyCodeBlock(this)">Copy</button>
+					</div>
+					<pre><code data-src="examples/string.robot"></code></pre>
+				</div>
+				<div class="code-card" data-category="std">
+					<div class="code-header">
+						<div>
+							<span class="file-name">xml.robot</span>
+							<span class="tag">XML</span>
+						</div>
+						<button class="copy-btn" onclick="copyCodeBlock(this)">Copy</button>
+					</div>
+					<pre><code data-src="examples/xml.robot"></code></pre>
+				</div>
+			</div>
+		</section>
 
 		<!-- FOOTER -->
 		<footer>
 			<div class="wrapper">
 				<div class="footer-logo">🤖 AutoTest Hub</div>
-				<div class="footer-desc">คลังความรู้ Automation Testing ด้วย Robot Framework</div>
+				<div class="footer-desc">Automation Testing Knowledge Base powered by Robot Framework</div>
 				<div class="footer-links">
 					<a href="https://docs.robotframework.org/docs" target="_blank">Official Docs</a>
 					<a href="https://github.com/robotframework/robotframework" target="_blank">GitHub</a>
@@ -795,5 +537,6 @@
 		</footer>
 
 		<script src="script.js"></script>
-	</body>
+</body>
+
 </html>
